@@ -1,0 +1,363 @@
+{
+  "fecha": "2026-09-29T06:30:47",
+  "tiempo_extraccion_s": 52.4,
+  "dimensiones_descriptores": {
+    "hog": 2916,
+    "color": 54,
+    "lbp": 10
+  },
+  "holdout": {
+    "n_train": 3200,
+    "n_test": 800,
+    "accuracy": 0.99375,
+    "precision": 0.9802955665024631,
+    "recall": 0.995,
+    "f1": 0.9875930521091811,
+    "matriz_confusion": [
+      [
+        596,
+        4
+      ],
+      [
+        1,
+        199
+      ]
+    ]
+  },
+  "ablacion": {
+    "hog": {
+      "media": 0.9884375000000001,
+      "std": 0.0035078038001005764
+    },
+    "color+lbp": {
+      "media": 0.8,
+      "std": 0.014490028899212026
+    },
+    "hog+color": {
+      "media": 0.9878125000000001,
+      "std": 0.0031868871959954944
+    },
+    "hog+color+lbp": {
+      "media": 0.9890625,
+      "std": 0.003125
+    }
+  },
+  "descriptores_elegidos": [
+    "hog",
+    "color",
+    "lbp"
+  ],
+  "comparacion_modelos": {
+    "SVM-RBF": {
+      "media": 0.9890625,
+      "std": 0.003125,
+      "tiempo_s": 8.8
+    },
+    "Random Forest": {
+      "media": 0.9650000000000001,
+      "std": 0.006449927325171973,
+      "tiempo_s": 10.3
+    },
+    "KNN (k=5)": {
+      "media": 0.9793749999999999,
+      "std": 0.006202947887899733,
+      "tiempo_s": 0.7
+    },
+    "Naive Bayes": {
+      "media": 0.89625,
+      "std": 0.007692833515681979,
+      "tiempo_s": 0.3
+    },
+    "Reg. logística": {
+      "media": 0.975625,
+      "std": 0.002119478119726637,
+      "tiempo_s": 0.5
+    }
+  },
+  "gridsearch": {
+    "mejores_parametros": {
+      "pca": "PCA(n_components=0.95, random_state=42)",
+      "svm__C": "10",
+      "svm__gamma": "scale"
+    },
+    "cv_media": 0.9915625,
+    "cv_std": 0.002119478119726676,
+    "folds": [
+      0.9890625,
+      0.9953125,
+      0.9921875,
+      0.990625,
+      0.990625
+    ],
+    "tabla": [
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "1",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9890625,
+        "std": 0.003125
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "1",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9818749999999999,
+        "std": 0.004901370981674402
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "1",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9146875,
+        "std": 0.008420120990817168
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "10",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9896875000000002,
+        "std": 0.00377595186674828
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "10",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.985625,
+        "std": 0.005172795424139646
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "10",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9203125,
+        "std": 0.00814900300650328
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "100",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9896875000000002,
+        "std": 0.00377595186674828
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "100",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.985625,
+        "std": 0.005172795424139646
+      },
+      {
+        "params": {
+          "pca": "passthrough",
+          "svm__C": "100",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9203125,
+        "std": 0.00814900300650328
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "scale"
+        },
+        "media": 0.99,
+        "std": 0.002338535866733708
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9803124999999999,
+        "std": 0.0035078038001005686
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9434374999999999,
+        "std": 0.006658523672707054
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9915625,
+        "std": 0.002119478119726676
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9856250000000001,
+        "std": 0.004001952648395518
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9525,
+        "std": 0.007368641326594759
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9915625,
+        "std": 0.002119478119726676
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9853125,
+        "std": 0.00402628085210159
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.95, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9525,
+        "std": 0.007368641326594759
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "scale"
+        },
+        "media": 0.9896874999999999,
+        "std": 0.0030618621784789684
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9818749999999999,
+        "std": 0.004592793267718446
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "1",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.9200000000000002,
+        "std": 0.009078649403958703
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "scale"
+        },
+        "media": 0.99,
+        "std": 0.003061862178478987
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9853125,
+        "std": 0.005096720759468783
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "10",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.930625,
+        "std": 0.007234898064243915
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "scale"
+        },
+        "media": 0.99,
+        "std": 0.003061862178478987
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "0.0001"
+        },
+        "media": 0.9853125,
+        "std": 0.005096720759468783
+      },
+      {
+        "params": {
+          "pca": "PCA(n_components=0.99, random_state=42)",
+          "svm__C": "100",
+          "svm__gamma": "0.001"
+        },
+        "media": 0.930625,
+        "std": 0.007234898064243915
+      }
+    ]
+  },
+  "cv_aumentacion": {
+    "folds": [
+      0.9875,
+      0.9953125,
+      0.990625,
+      0.99375,
+      0.9953125
+    ],
+    "media": 0.9925,
+    "std": 0.003029799910885212,
+    "usada_en_modelo_final": true
+  },
+  "cv_final": {
+    "folds": [
+      0.9875,
+      0.9953125,
+      0.990625,
+      0.99375,
+      0.9953125
+    ],
+    "media": 0.9925,
+    "std": 0.003029799910885212,
+    "usada_en_modelo_final": true
+  },
+  "latencia_modelo_ms": 2.83
+}
